@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital@0;1&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+
+    --cor-de-fundo: #1E1E1E;
+    --cor-do-texto: aliceblue;
+    --cor-destaque: rgb(120, 220, 255);
+}
+
+body {
+
+    box-sizing: border-box;
+    /* height: 100vh; */
+    background-color: var(--cor-de-fundo);
+    color: var(--cor-do-texto);
+
+}
+
+.cabecalho {
+
+padding: 2% 0% 0% 12%;
+
+}
+
+.cabecalho__menu {
+
+display: flex;
+justify-content: left;
+gap: 12rem;
+
+
+}
+.cabecalho__menu__links {
+
+font-size: 1.25rem;
+font-family: "Montserrat", sans-serif;
+font-weight:600;
+color:var(--cor-destaque);
+}
+
+.principal {
+
+    padding: 8% 10%;
+    display: flex;
+    gap: 10%;
+    /* aqui, a referência para alinhamento ficou sendo a imagem */
+    /* é uma propriedade em que os elementos estão referenciados uns nos outros: */
+    align-items: center; 
+
+    /* aqui, os dois elementos dentro de main são separados por um espaço entre eles: */
+    justify-content: space-between;
+}
+
+.principal__sobre__mim {
+
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+.principal p{
+
+    width: 90%;
+    font-size: 1.125rem;
+    font-family: "Montserrat", sans-serif;
+    text-align: justify;
+}
+.principal img {
+
+    max-width: 40%;
+    max-height: 45%;
+}
+
+.rodape {
+
+    padding: 1rem 0rem;
+    width: 100%;
+    background-color: rgb(120, 220, 255);
+    text-align: center;
+}
+
+.rodape-texto {
+
+   font-family: "Montserrat", sans-serif;
+   font-size: 1rem;
+   color:black;
+   font-weight: 600;
+}
+
+@media (max-width: 700px){
+
+    .principal {
+
+        flex-direction: column-reverse;
+        gap: 2em;
+        padding: 5%;
+    }
+
+    .principal__sobre__mim {
+
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.625rem;
+    }
+
+    .principal img {
+
+        max-width: 70%;
+        
+    }
+    
+    .cabecalho {
+
+        padding: 10% 20% 0% 20%;
+
+   }
+
+    .cabecalho__menu{
+
+        justify-content: center;
+        gap: 50%;
+    }
+
+}
